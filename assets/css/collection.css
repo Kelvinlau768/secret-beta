@@ -1,0 +1,943 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+button {
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+::selection {
+    background-color: rgb(50, 168, 252);
+    color: #fff;
+}
+
+@media screen and (max-width: 979px){
+    .main .desktop-container {
+        display: none;
+    }
+
+    .main .mobile-container {
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 200px;
+    }
+
+    .main .mobile-container .container .swiper .swiper-wrapper img {
+        width: 100%;
+    }
+
+    .main .mobile-container .product-header {
+        margin: 30px;
+    }
+
+    .main .mobile-container .product-header .product-type {
+        color: #0247cd;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .main .mobile-container .product-header .product-name {
+        font-size: 25px;
+        line-height: 24px;
+        margin: 5px 0;
+    }
+
+    .main .mobile-container .product-header .product-categories {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .main .mobile-container .product-header .product-price {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 10px 0;
+        line-height: 24px;
+    }
+
+    .main .mobile-container .product-container {
+        margin: 0 50px;
+    }
+
+    .main .mobile-container .product-container .size-group .content {
+        display: flex;
+        justify-content: space-between;
+        margin: 75px 0 10px 0;
+    }
+
+    .main .mobile-container .product-container .size-group .content p:nth-child(1) {
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        cursor: pointer;
+    }
+
+    .main .mobile-container .product-container .size-group .content p:nth-child(2) {
+        font-size: 16px;
+        font-weight: 500;
+        color: #707072;
+        cursor: pointer;
+    }
+
+    .main .mobile-container .product-container .size-group .group {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main .mobile-container .product-container .size-group .group button {
+        padding: 12px 0;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+        border: 1.5px solid rgb(211, 211, 211);
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .main .mobile-container .product-container .size-group .group button:hover {
+        border: 1px solid blue;
+    }
+
+    .main .mobile-container .product-container .size-group .group button:focus {
+        border: 2px solid black;
+    }
+
+    .main .mobile-container .product-container .cart-button {
+        margin: 20px 0;
+        background-color: black;
+        color: white;
+        padding: 30px;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 50px;
+    }
+
+    .main .mobile-container .product-container .cart-button:hover {
+        opacity: 0.7;
+        transition: 0.4;
+    }
+
+    .main .mobile-container .product-container .favourite-button {
+        padding: 30px;
+        width: 100%;
+        background-color: white;
+        border-radius: 50px;
+        border: 1px solid #dbdbdb;
+    }
+
+    .main .mobile-container .product-container .favourite-button:hover {
+        border: 2px solid black;
+    }
+
+    .main .mobile-container .product-container .text {
+        text-align: center;
+        margin: 30px 60px 50px;
+        color: #707072;
+        line-height: 28px;
+    }
+
+    .main .mobile-container .product-container .content .product-description {
+        font-size: 16px;
+        line-height: 28px;
+        color: black;
+        font-weight: 500;
+    }
+
+    .main .mobile-container .product-container .content ul {
+        padding: 32px 0 26px 20px;
+    }
+
+    .main .mobile-container .product-container .content ul li {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    .main .mobile-container .product-container .content a {
+        color: black;
+    }
+
+    .main .mobile-container .product-container .accordion {
+        width: 100%;
+        padding: 0;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text {
+        width: 100%;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text {
+        margin-top: 10px;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .li-text {
+        list-style: none;
+        cursor: pointer;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .li-text .question-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .li-text .question-arrow .question {
+        font-size: 20px;
+        font-weight: 500;
+        color: black;
+        transition: all 0.3s ease;
+        padding: 10px 0;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .li-text .review {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .li-text .review .star {
+        text-align: right;
+        background-color: red;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .li-text .question-arrow .arrow {
+        font-size: 20px;
+        color: black;
+        transition: all 0.3s ease;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .li-text.showAnswer .question-arrow .arrow {
+        transform: rotate(-180deg);
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .li-text .question-arrow .icon-box .arrow {
+        font-size: 20px;
+        color: black;
+        transition: all 0.3s ease;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .li-text.showAnswer .question-arrow .icon-box .arrow {
+        transform: rotate(-180deg);
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .li-text .line {
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin: 25px 0;
+        background: black;
+        opacity: 0.1;
+        padding: 0 10px;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .li-text p {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        display: none;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .li-text.showAnswer p {
+        display: block;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text .arrow-1 {
+        padding-bottom: 50px;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text {
+        margin-top: 20px;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text p {
+        line-height: 1.7;
+    }
+    
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text ul {
+        display: none;
+        line-height: 1.7;
+        list-style: disc;
+        margin-top: 20px;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container {
+        display: none;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container p {
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container .user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container .user img {
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container .user .star {
+        width: 100%;
+        text-align: right;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text.showAnswer .answer-text .review-container {
+        display: block;
+    }
+
+    .main .mobile-container .product-container .accordion .accordion-text .faq-text .li-text.showAnswer .answer-text ul {
+        display: block;
+        padding: 0 0px 30px 15px;
+    }
+}
+
+@media screen and (min-width: 980px) and (max-width: 1400px){
+    .mobile-container {
+        display: none;
+    }
+
+    .main {
+        margin: 75px;
+    }
+
+    .main .desktop-container {
+        display: grid;
+        grid-template-columns: 5fr 3fr;
+        max-width: 1200px;
+        margin: 0 auto 200px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .main .desktop-container .image-container {
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+        /* display: grid;
+        grid-template-columns: repeat(3, 1fr); */
+        gap: 20px;
+        padding: 0 50px 0 0;
+    }
+
+    .main .desktop-container .image-container .group {
+        background-color: white;
+        display: grid;
+        grid-template-rows: repeat(8, 1fr);
+        gap: 5px;
+    }
+
+    .main .desktop-container .image-container .group img {
+        width: 100%;
+        display: inline;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .main .desktop-container .image-container .group img:hover {
+        opacity: 0.5;
+    }
+
+    .main .desktop-container .image-container .selected-image {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .main .desktop-container .product-container {
+        background-color: white;
+        padding: 0;
+        min-width: 380px;
+        max-width: 380px;
+        width: 380px;
+    }
+
+    .main .desktop-container .product-container .product-header .product-type {
+        color: #0247cd;;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .main .desktop-container .product-container .product-header .product-name {
+        font-size: 25px;
+        line-height: 24px;
+        margin: 5px 0;
+    }
+
+    .main .desktop-container .product-container .product-header .product-categories {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .main .desktop-container .product-container .product-header .product-price {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 10px 0;
+        line-height: 24px;
+    }
+
+    .main .desktop-container .product-container .size-group .content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .main .desktop-container .product-container .size-group .content p:nth-child(1) {
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        cursor: pointer;
+    }
+
+    .main .desktop-container .product-container .size-group .content p:nth-child(2) {
+        font-size: 16px;
+        font-weight: 500;
+        color: #707072;
+        cursor: pointer;
+    }
+
+    .main .desktop-container .product-container .size-group .group {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 10px;
+    }
+
+    .main .desktop-container .product-container .size-group .group button {
+        padding: 12px 0;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+        border: 1.5px solid rgb(211, 211, 211);
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .main .desktop-container .product-container .size-group .group button:hover {
+        border: 2px solid black;
+    }
+
+    .main .desktop-container .product-container .cart-button {
+        margin: 10px 0;
+        background-color: black;
+        color: white;
+        padding: 20px 30px;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+
+    .main .desktop-container .product-container .cart-button:hover {
+        opacity: 0.7;
+        transition: 0.4;
+    }
+
+    .main .desktop-container .product-container .favourite-button {
+        padding: 20px 30px;
+        width: 100%;
+        background-color: white;
+        border-radius: 30px;
+        border: 1px solid #dbdbdb;
+    }
+
+    .main .desktop-container .product-container .favourite-button:hover {
+        border: 2px solid black;
+    }
+
+    .main .desktop-container .product-container .text {
+        text-align: center;
+        margin: 30px 60px 50px;
+        color: #707072;
+        line-height: 28px;
+    }
+
+    .main .desktop-container .product-container .content .product-description {
+        font-size: 16px;
+        line-height: 28px;
+        color: black;
+        font-weight: 500;
+    }
+
+    .main .desktop-container .product-container .content ul {
+        padding: 32px 0 26px 20px;
+    }
+
+    .main .desktop-container .product-container .content ul li {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    .main .desktop-container .product-container .content a {
+        color: black;
+    }
+
+    .main .desktop-container .product-container .accordion {
+        width: 100%;
+        padding: 0;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text {
+        width: 100%;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text {
+        margin-top: 10px;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .li-text {
+        list-style: none;
+        cursor: pointer;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .question-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .question-arrow .question {
+        font-size: 20px;
+        font-weight: 500;
+        color: black;
+        transition: all 0.3s ease;
+        padding: 10px 0;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .review .star {
+        margin-left: 140px;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .question-arrow .arrow {
+        font-size: 20px;
+        color: black;
+        transition: all 0.3s ease;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text.showAnswer .question-arrow .arrow {
+        transform: rotate(-180deg);
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .question-arrow .icon-box .arrow {
+        font-size: 20px;
+        color: black;
+        transition: all 0.3s ease;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text.showAnswer .question-arrow .icon-box .arrow {
+        transform: rotate(-180deg);
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .line {
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin: 25px 0;
+        background: black;
+        opacity: 0.1;
+        padding: 0 10px;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text p {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        display: none;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text.showAnswer p {
+        display: block;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .arrow-1 {
+        padding-bottom: 50px;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text {
+        margin-top: 20px;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text p {
+        line-height: 1.7;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text ul {
+        display: none;
+        line-height: 1.7;
+        list-style: disc;
+        margin-top: 20px;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container {
+        display: none;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container p {
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container .user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container .user img {
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container .user .star {
+        width: 100%;
+        text-align: right;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text.showAnswer .answer-text .review-container {
+        display: block;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text.showAnswer .answer-text ul {
+        display: block;
+        padding: 0 0px 30px 15px;
+    }
+}
+
+@media screen and (min-width: 1401px){
+    .mobile-container {
+        display: none;
+    }
+
+    .main {
+        margin-top: 50px;
+    }
+
+    .main .desktop-container {
+        display: grid;
+        grid-template-columns: 5fr 3fr;
+        max-width: 1200px;
+        margin: 0 auto 200px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .main .desktop-container .image-container {
+        padding: 0 100px 0 60px;
+    }
+
+    .main .desktop-container .image-container .selected-image {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .main .desktop-container .product-container {
+        background-color: white;
+        padding: 0 60px 0 0;
+        min-width: 350px;
+    }
+
+    .main .desktop-container .product-container .product-header .product-type {
+        color: #0247cd;;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .main .desktop-container .product-container .product-header .product-name {
+        font-size: 25px;
+        line-height: 24px;
+        margin: 5px 0;
+    }
+
+    .main .desktop-container .product-container .product-header .product-categories {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .main .desktop-container .product-container .product-header .product-price {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 10px 0;
+        line-height: 24px;
+    }
+
+    .main .desktop-container .product-container .size-group .content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .main .desktop-container .product-container .size-group .content p:nth-child(1) {
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        cursor: pointer;
+    }
+
+    .main .desktop-container .product-container .size-group .content p:nth-child(2) {
+        font-size: 16px;
+        font-weight: 500;
+        color: #707072;
+        cursor: pointer;
+    }
+
+    .main .desktop-container .product-container .size-group .group {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 10px;
+    }
+
+    .main .desktop-container .product-container .size-group .group button {
+        padding: 12px 0;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+        border: 1.5px solid rgb(211, 211, 211);
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .main .desktop-container .product-container .size-group .group button:hover {
+        border: 2px solid black;
+    }
+
+    .main .desktop-container .product-container .cart-button {
+        margin: 10px 0;
+        background-color: black;
+        color: white;
+        padding: 20px 30px;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+
+    .main .desktop-container .product-container .cart-button:hover {
+        opacity: 0.7;
+        transition: 0.4;
+    }
+
+    .main .desktop-container .product-container .favourite-button {
+        padding: 20px 30px;
+        width: 100%;
+        background-color: white;
+        border-radius: 30px;
+        border: 1px solid #dbdbdb;
+    }
+
+    .main .desktop-container .product-container .favourite-button:hover {
+        border: 2px solid black;
+    }
+
+    .main .desktop-container .product-container .text {
+        text-align: center;
+        margin: 30px 60px 50px;
+        color: #707072;
+        line-height: 28px;
+    }
+
+    .main .desktop-container .product-container .content .product-description {
+        font-size: 16px;
+        line-height: 28px;
+        color: black;
+        font-weight: 500;
+    }
+
+    .main .desktop-container .product-container .content ul {
+        padding: 32px 0 26px 20px;
+    }
+
+    .main .desktop-container .product-container .content ul li {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    .main .desktop-container .product-container .content a {
+        color: black;
+    }
+
+    .main .desktop-container .product-container .accordion {
+        width: 100%;
+        padding: 0;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text {
+        width: 100%;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text {
+        margin-top: 10px;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .li-text {
+        list-style: none;
+        cursor: pointer;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .question-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .question-arrow .question {
+        font-size: 20px;
+        font-weight: 500;
+        color: black;
+        transition: all 0.3s ease;
+        padding: 10px 0;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .review .star {
+        margin-left: 140px;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .question-arrow .arrow {
+        font-size: 20px;
+        color: black;
+        transition: all 0.3s ease;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text.showAnswer .question-arrow .arrow {
+        transform: rotate(-180deg);
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .question-arrow .icon-box .arrow {
+        font-size: 20px;
+        color: black;
+        transition: all 0.3s ease;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text.showAnswer .question-arrow .icon-box .arrow {
+        transform: rotate(-180deg);
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text .line {
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin: 25px 0;
+        background: black;
+        opacity: 0.1;
+        padding: 0 10px;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text p {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        display: none;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .li-text.showAnswer p {
+        display: block;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .arrow-1 {
+        padding-bottom: 50px;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text {
+        margin-top: 20px;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text p {
+        line-height: 1.7;
+    }
+    
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text ul {
+        display: none;
+        line-height: 1.7;
+        list-style: disc;
+        margin-top: 20px;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container {
+        display: none;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container p {
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container .user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container .user img {
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text .answer-text .review-container .user .star {
+        width: 100%;
+        text-align: right;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text.showAnswer .answer-text .review-container {
+        display: block;
+    }
+
+    .main .desktop-container .product-container .accordion .accordion-text .faq-text .li-text.showAnswer .answer-text ul {
+        display: block;
+        padding: 0 0px 30px 15px;
+    }
+}
