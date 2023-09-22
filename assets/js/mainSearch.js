@@ -20,3 +20,23 @@ search.addEventListener('keyup', (e) => {
         searchBtn.click();
     }
 })
+
+// function checkFileExist(urlToFile) {
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('HEAD', urlToFile, false);
+//     xhr.send();
+
+//     if (xhr.status == "404") {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
+
+// var result = checkFileExist("http://127.0.0.1:5500/home.html");
+
+// if (result == true) {
+//     alert('yay, file exists!');
+// } else {
+//     alert('file does not exist');
+// }

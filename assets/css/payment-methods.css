@@ -1,0 +1,68 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+body {
+    background: white;
+    color: black;
+    box-sizing: border-box;
+    font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, Circular-Cryl, CircularSp-Grek, CircularSp-Deva, sans-serif, Helvetica, Arial;
+}
+
+.payment-container {
+    margin: 0 20px;
+}
+
+.home-button {
+    max-width: 600px;
+    margin: 30px auto 0;
+    width: auto;
+    padding: 0 10px;
+}
+
+.home-button a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    width: auto;
+    gap: 32px;
+    max-width: 600px;
+}
+
+.payment .box {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 24px 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.payment .box p {
+    font-weight: 400;
+    line-height: 24px;
+    word-spacing: 0px;
+    text-decoration: none;
+}
+
+.payment .box:nth-child(1) p:nth-child(1) {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.payment .box ul {
+    font-weight: 400;
+    line-height: 24px;
+    margin: 16px 0px 16px 40px;
+}

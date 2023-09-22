@@ -1,0 +1,25 @@
+.maintenance {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    text-align: center;
+    margin: 75px 40px;
+}
+
+.maintenance button {
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 150px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.maintenance button:hover {
+    opacity: 0.6;
+}
