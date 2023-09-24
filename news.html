@@ -1,53 +1,769 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News App</title>
-    <link rel="stylesheet" href="news.css">
+    <meta http-equiv="content-language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
+
+    <!-- title -->
+    <title>Maintenance</title>
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+
+    <!-- google fonts - poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- null product -->
+    <link rel="stylesheet" href="assets/css/maintenancess">
+
+    <!-- header -->
+    <link rel="stylesheet" href="assets/css/header.css">
+
+    <!-- footer -->
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
 
-    <nav>
-        <div class="main-nav container flex">
-            <a href="#" onclick="reload()" class="company-logo">
-                <img src="./assets/logo.png" alt="company logo">
-            </a>
-            <div class="nav-links">
-                <ul class="flex">
-                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
-                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
-                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+    <div class="overlay" data-overlay></div>
+
+    <header>
+        <div class="header-top">
+            <div class="header-container">
+                <ul class="header-social-container">
+                    <li>
+                        <a href="https://facebook.com/secretofficial.id" class="social-link header-a">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+          
+                    <li>
+                        <a href="https://twitter.com/secretmall_id" class="social-link header-a">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+          
+                    <li>
+                        <a href="https://www.instagram.com/secretmall.id/" class="social-link header-a">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+          
+                    <li>
+                        <a href="https://www.tiktok.com/@secretmall" class="social-link header-a">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.youtube.com/@secretmall " class="social-link header-a">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://wa.me/+62895340347545" class="social-link header-a">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </li>
+          
+                </ul>
+    
+                <div class="header-alert-news">
+                    <p>
+                        <b>Free Shipping</b>
+                        This Week Order Over - $55
+                    </p>
+                </div>
+    
+                <div class="header-top-actions">
+                    <select name="currency">
+                        <option value="usd">USD &dollar;</option>
+                        <option value="eur">EUR &euro;</option>
+                    </select>
+          
+                    <select name="language">
+                        <option value="en-US">English</option>
+                        <option value="es-ES">Espa&ntilde;ol</option>
+                        <option value="fr">Fran&ccedil;ais</option>
+                    </select>
+                </div>
+    
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="header-container">
+                <a href="#" class="header-logo header-a">
+                    <h1 style="text-align: center; color: black;">Secret</h1>
+                </a>
+
+                <div class="header-search-container">
+                    <input type="search" name="search" id="search" class="search-field" placeholder="Enter your product name...">
+                    <button class="search-btn" id="searchBtn" onclick="">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                </div>
+
+                <div class="header-user-actions">
+                    <button class="action-btn">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </button>
+          
+                    <button class="action-btn">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <span class="count">0</span>
+                    </button>
+          
+                    <button class="action-btn">
+                        <ion-icon name="bag-handle-outline"></ion-icon>
+                        <span class="count">0</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <nav class="desktop-navigation-menu">
+            <div class="header-container">
+      
+                <ul class="desktop-menu-category-list">
+                    <li class="menu-category">
+                        <a href="../home.html" class="menu-title header-a">Home</a>
+                    </li>
+      
+                    <li class="menu-category">
+                        <a href="#" class="menu-title header-a">Categories</a>
+      
+                        <div class="dropdown-panel">
+      
+                            <ul class="dropdown-panel-list">
+                                <li class="menu-title">
+                                    <a href="#" class="header-a">Men</a>
+                                </li>
+      
+                                <li class="panel-list-item">
+                                    <a href="../product/men/clothing.html" class="header-a">Clothing</a>
+                                </li>
+      
+                                <li class="panel-list-item">
+                                    <a href="../product/men/accessories.html" class="header-a">Accessories</a>
+                                </li>
+      
+                                <li class="panel-list-item">
+                                    <a href="../product/men/shoes.html" class="header-a">Shoes</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="../product/men/flash-sale.html" class="header-a">FLASH SALE UP TO 90%</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                    <a href="../product/men.html" class="header-a">Show All</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="#" class="header-a">
+                                        <img src="../assets/images2/men.png" alt="headphone collection" width="250" height="119">
+                                    </a>
+                                </li>
+                            </ul>
+      
+                            <ul class="dropdown-panel-list">
+                                <li class="menu-title">
+                                    <a href="#" class="header-a">Women</a>
+                                </li>
+      
+                                <li class="panel-list-item">
+                                    <a href="../product/women/clothing.html" class="header-a">Clothing</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="../product/women/accessories.html" class="header-a">Accessories</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="../product/women/shoes.html" class="header-a">Shoes</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="../product/women/flash-sale.html" class="header-a">FLASH SALE UP TO 90%</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                    <a href="../product/women.html" class="header-a">Show All</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="#" class="header-a">
+                                        <img src="../assets/images2/men.png" alt="men's fashion" width="250" height="119">
+                                    </a>
+                                </li>
+                            </ul>
+      
+                            <ul class="dropdown-panel-list">
+                                <li class="menu-title">
+                                    <a href="#" class="header-a">Food & Drinks</a>
+                                </li>
+                          
+                                <li class="panel-list-item">
+                                    <a href="../product/snacks&drinks.html" class="header-a">Snacks & Drinks</a>
+                                </li>
+                          
+                                <li class="panel-list-item">
+                                    <a href="../product/cereal&spreads.html" class="header-a">Cereal & Spreads</a>
+                                </li>
+                          
+                                <li class="panel-list-item">
+                                    <a href="../product/food-pantry.html" class="header-a">Food Pantry</a>
+                                </li>
+                          
+                                <li class="panel-list-item">
+                                    <a href="../product/crate.html" class="header-a">Japenese Crate</a>
+                                </li>
+                          
+                                <li class="panel-list-item">
+                                    <a href="../product/food&drinks.html" class="header-a">Show All</a>
+                                </li>
+                          
+                                <li class="panel-list-item">
+                                    <a href="#" class="header-a">
+                                        <img src="../assets/images2/men.png" alt="women's fashion" width="250" height="119">
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                            <ul class="dropdown-panel-list">
+                                <li class="menu-title">
+                                    <a href="#" class="header-a">Phone Case</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="../product/case/silicone-case.html" class="header-a">Silicone Case</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="../product/case/transparent-case.html" class="header-a">Transparent Case</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="../product/case/premium-case.html" class="header-a">Premium Case</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="../product/case/tpu-case.html" class="header-a">TPU Case</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="../product/case.html" class="header-a">Show All</a>
+                                </li>
+                            
+                                <li class="panel-list-item">
+                                    <a href="#" class="header-a">
+                                        <img src="../assets/images2/phone-case.png" alt="mouse collection" width="250" height="119">
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </li>
+      
+                    <li class="menu-category">
+                        <a href="#" class="menu-title header-a">Men</a>
+                    
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item">
+                                <a href="../product/women/shirts.html" class="header-a">Shirts/Tops</a>
+                            </li>
+                    
+                            <li class="dropdown-item">
+                                <a href="../product/women/shorts.html" class="header-a">Shorts/Bottoms</a>
+                            </li>
+                        
+                            <li class="dropdown-item">
+                                <a href="../product/women/pants.html" class="header-a">Pants/Tights</a>
+                            </li>
+                        
+                            <li class="dropdown-item">
+                                <a href="../product/women/jackets.html" class="header-a">Jackets</a>
+                            </li>
+
+                            <li class="dropdown-item">
+                                <a href="../product/women/shoes.html" class="header-a">Shoes</a>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li class="menu-category">
+                        <a href="#" class="menu-title header-a">Women</a>
+                    
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item">
+                                <a href="../product/women/skirts.html" class="header-a">Skirts/Dresses</a>
+                            </li>
+                    
+                            <li class="dropdown-item">
+                                <a href="../product/women/shorts.html" class="header-a">Shorts/Bottoms</a>
+                            </li>
+                        
+                            <li class="dropdown-item">
+                                <a href="../product/women/pants.html" class="header-a">Pants/Tights</a>
+                            </li>
+                        
+                            <li class="dropdown-item">
+                                <a href="../product/women/jackets.html" class="header-a">Jackets</a>
+                            </li>
+
+                            <li class="dropdown-item">
+                                <a href="../product/women/shoes.html" class="header-a">Shoes</a>
+                            </li>
+                        </ul>
+                    </li>
+      
+                    <li class="menu-category">
+                        <a href="#" class="menu-title header-a">Kids</a>
+      
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item">
+                                <a href="../product/kids/new-arrivals.html" class="header-a">New Arrivals</a>
+                            </li>
+
+                            <li class="dropdown-item">
+                                <a href="../product/kids/clothing.html" class="header-a">Clothing</a>
+                            </li>
+
+                            <li class="dropdown-item">
+                                <a href="../product/kids/shoes.html" class="header-a">Shoes</a>
+                            </li>
+                        </ul>
+                    </li>
+      
+                    <li class="menu-category">
+                        <a href="#" class="menu-title header-a">Food & Drinks</a>
+                    
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item">
+                                <a href="../product/snacks.html" class="header-a">Snacks</a>
+                            </li>
+                    
+                            <li class="dropdown-item">
+                                <a href="../product/chocolates&sweets.html" class="header-a">Chocolates & Sweets</a>
+                            </li>
+                        
+                            <li class="dropdown-item">
+                                <a href="../product/noodles&pasta.html" class="header-a">Noodles & Pasta</a>
+                            </li>
+
+                            <li class="dropdown-item">
+                                <a href="../product/cereal&oats.html" class="header-a">Cereal & Oats</a>
+                            </li>
+                        
+                            <li class="dropdown-item">
+                                <a href="../product/beverages.html" class="header-a">Beverages</a>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li class="menu-category">
+                        <a href="../product/phone-case.html" class="menu-title header-a">Phone Case</a>
+                    </li>
+                
+                    <li class="menu-category">
+                        <a href="../product/hot-offers.html" class="menu-title header-a">Hot Offers</a>
+                    </li>
+                </ul>
+      
+            </div>
+      
+        </nav>
+      
+        <div class="mobile-bottom-navigation">
+            <button class="action-btn" data-mobile-menu-open-btn>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+      
+            <button class="action-btn">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+                <span class="count">0</span>
+            </button>
+      
+            <button class="action-btn" onclick="window.location='../home.html'">
+                <ion-icon name="home-outline"></ion-icon>
+            </button>
+      
+            <button class="action-btn">
+                <ion-icon name="heart-outline"></ion-icon>
+                <span class="count">0</span>
+            </button>
+      
+            <button class="action-btn" data-mobile-menu-open-btn>
+                <ion-icon name="grid-outline"></ion-icon>
+            </button>
+        </div>
+      
+        <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+            <div class="menu-top">
+                <h2 class="menu-title">Menu</h2>
+    
+                <button class="menu-close-btn" data-mobile-menu-close-btn>
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+    
+            <ul class="mobile-menu-category-list">
+                <li class="menu-category">
+                    <a href="../home.html" class="menu-title header-a">Home</a>
+                </li>
+    
+                <li class="menu-category">
+                    <button class="accordion-menu" data-accordion-btn>
+                        <p class="menu-title">Men</p>
+                        <div>
+                            <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                            <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                        </div>
+                    </button>
+    
+                    <ul class="submenu-category-list" data-accordion>
+                        <li class="submenu-category">
+                            <a href="../product/men/shirts.html" class="submenu-title header-a">Shirts/Tops</a>
+                        </li>
+                    
+                        <li class="submenu-category">
+                            <a href="../product/men/shorts.html" class="submenu-title header-a">Shorts/Bottoms</a>
+                        </li>
+                    
+                        <li class="submenu-category">
+                            <a href="../product/men/pants.html" class="submenu-title header-a">Pants/Tights</a>
+                        </li>
+                    
+                        <li class="submenu-category">
+                            <a href="../product/men/jackets.html" class="submenu-title header-a">Jackets</a>
+                        </li>
+
+                        <li class="submenu-category">
+                            <a href="../product/men/shoes.html" class="submenu-title header-a">Shoes</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class="menu-category">
+                    <button class="accordion-menu" data-accordion-btn>
+                        <p class="menu-title">Women</p>
+                    
+                        <div>
+                            <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                            <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                        </div>
+                    </button>
+                
+                    <ul class="submenu-category-list" data-accordion>
+                        <li class="submenu-category">
+                            <a href="../product/women/skirts.html" class="submenu-title header-a">Skirts/Dresses</a>
+                        </li>
+                  
+                        <li class="submenu-category">
+                            <a href="../product/women/shorts.html" class="submenu-title header-a">Shorts/Bottoms</a>
+                        </li>
+                  
+                        <li class="submenu-category">
+                            <a href="../product/women/pants.html" class="submenu-title header-a">Pants/Tights</a>
+                        </li>
+                  
+                        <li class="submenu-category">
+                            <a href="../product/women/jackets.html" class="submenu-title header-a">Jackets</a>
+                        </li>
+
+                        <li class="submenu-category">
+                            <a href="../product/women/shoes.html" class="submenu-title header-a">Shoes</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class="menu-category">
+                    <button class="accordion-menu" data-accordion-btn>
+                        <p class="menu-title">Kids</p>
+                        <div>
+                        <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                        <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                        </div>
+                    </button>
+              
+                    <ul class="submenu-category-list" data-accordion>
+                        <li class="submenu-category">
+                            <a href="../product/kids/new-arrivals.html" class="submenu-title header-a">New Arrivals</a>
+                        </li>
+                
+                        <li class="submenu-category">
+                            <a href="../product/kids/clothing.html" class="submenu-title header-a">Clothing</a>
+                        </li>
+                
+                        <li class="submenu-category">
+                            <a href="../product/kids/shoes.html" class="submenu-title header-a">Shoes</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class="menu-category">
+                    <button class="accordion-menu" data-accordion-btn>
+                        <p class="menu-title">Food & Drinks</p>
+                    
+                        <div>
+                            <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                            <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                        </div>
+                    </button>
+                
+                    <ul class="submenu-category-list" data-accordion>
+                        <li class="submenu-category">
+                            <a href="../product/snacks.html" class="submenu-title header-a">Snacks</a>
+                        </li>
+                  
+                        <li class="submenu-category">
+                            <a href="../product/chocolates&sweets.html" class="submenu-title header-a">Chocolates & Sweets</a>
+                        </li>
+                  
+                        <li class="submenu-category">
+                            <a href="../product/noodles&pasta.html" class="submenu-title header-a">Noodles & Pasta</a>
+                        </li>
+                  
+                        <li class="submenu-category">
+                            <a href="../product/cereal&oats.html" class="submenu-title header-a">Cereal & Oats</a>
+                        </li>
+
+                        <li class="submenu-category">
+                            <a href="../product/beverages.html" class="submenu-title header-a">Beverages</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class="menu-category">
+                    <a href="../product/phone-case.html" class="menu-title header-a">Phone Case</a>
+                </li>
+    
+                <li class="menu-category">
+                    <a href="../product/hot-offers.html" class="menu-title header-a">Hot Offers</a>
+                </li>
+    
+            </ul>
+    
+            <div class="menu-bottom">
+    
+                <ul class="menu-category-list" style="display: none;">
+                    <li class="menu-category">
+    
+                        <button class="accordion-menu" data-accordion-btn>
+                            <p class="menu-title">Language</p>
+                            <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+                        </button>
+    
+                        <ul class="submenu-category-list" data-accordion>
+    
+                            <li class="submenu-category">
+                                <a href="#" class="submenu-title header-a">English</a>
+                            </li>
+                
+                            <li class="submenu-category">
+                                <a href="#" class="submenu-title header-a">Espa&ntilde;ol</a>
+                            </li>
+                        
+                            <li class="submenu-category">
+                                <a href="#" class="submenu-title header-a">Fren&ccedil;h</a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <li class="menu-category">
+                        <button class="accordion-menu" data-accordion-btn>
+                            <p class="menu-title">Currency</p>
+                            <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+                        </button>
+                  
+                        <ul class="submenu-category-list" data-accordion>
+                            <li class="submenu-category">
+                                <a href="#" class="submenu-title header-a">USD &dollar;</a>
+                            </li>
+                    
+                            <li class="submenu-category">
+                                <a href="#" class="submenu-title header-a">EUR &euro;</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <ul class="menu-social-container">
+                    <li>
+                        <a href="https://facebook.com/secretofficial.id" class="social-link header-a">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="https://twitter.com/secretmall_id" class="social-link header-a">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.instagram.com/secretmall.id/" class="social-link header-a">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.tiktok.com/@secretmall" class="social-link header-a">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.tiktok.com/@secretmall" class="social-link header-a">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div class="search-bar flex">
-                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
-                <button id="search-button" class="search-button">Search</button>
-            </div>
-        </div>
-    </nav>
+        </nav>
+      
+        <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+    </header>
     
+    <div class="maintenance">
+        <img src="assets/images/logo/secret.png" width="100px">
+        <h2>We'II be back.</h2>
+        <p>We're busy updating the Secret Website for you and will be back soon.</p>
+        <button onclick="window.location='home.html';">Back to Home</button>
+    </div>
 
-    <main>
-        <div class="cards-container container flex" id="cards-container">
-            
-        </div>
-    </main>
-
-    <template id="template-news-card">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+    <footer class="desktop-footer">
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <ul class="footer_header">
+                        <li><a class="footer-header" href="store.html">FIND A STORE</a></li>
+                        <li><a class="footer-header" href="member.html">BECOME A MEMBER</a></li>
+                        <li><a class="footer-header" href="sign-up.html">SIGN UP FOR EMAIL</a></li>
+                        <li><a class="footer-header" href="student-discount.html">STUDENT DISCOUNT</a></li>
+                        <li><a class="footer-header" href="feedback.html">SEND US FEEBACK</a></li>
+                    </ul>
+                    <ul class="footer_header">
+                        <li><a class="footer-header" href="help.html">GET HELP</a></li>
+                        <li><a class="footer-desc" href="order-status.html">Order Status</a></li>
+                        <li><a class="footer-desc" href="delivery.html">Delivery</a></li>
+                        <li><a class="footer-desc" href="returns.html">Returns</a></li>
+                        <li><a class="footer-desc" href="payment-methods.html">Payment Methods</a></li>
+                        <li><a class="footer-desc" href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                    <ul class="footer_header">
+                        <li><a class="footer-header" href="about-us.html">ABOUT SECRET</a></li>
+                        <li><a class="footer-desc" href="news.html">News</a></li>
+                        <li><a class="footer-desc" href="careers.html">Careers</a></li>
+                        <li><a class="footer-desc" href="investors.html">Investors</a></li>
+                        <li><a class="footer-desc" href="sustainability.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="social_media">
+                    <a style="display: none;" href="https://www.tiktok.com/@secretmall"><i class="bx bx-tiktok"></i></a>
+                    <a href="https://facebook.com/secretofficial.id"><i class="bx bxl-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/secretmall.id/"><i class="bx bxl-instagram-alt"></i></a>
+                    <a href="https://twitter.com/secretmall_id"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://wa.me/+62895340347545"><i class="bx bxl-whatsapp"></i></a>
+                    <a href="https://www.youtube.com/@secretmall "><i class="bx bxl-youtube"></i></a>
+                </div>
             </div>
-            <div class="card-content">
-                <h3 id="news-title">This is the Title</h3>
-                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
-                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+
+            <div class="footer_bottom">
+                <div class="copy_right">
+                    <i class="bx bxs-map"></i>
+                    <span class="location"> Indonesia</span>
+                    <span class="secret-copyright">© 2022 Secret, Inc. All Rights Reserved</span>
+                </div>
+                <div class="container">
+                    <a href="guides.html">Guides</a>
+                    <a href="terms-of-sale.html">Terms of Sale</a>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="privacy-policy.html">Secret Privacy Policy</a>
+                </div>
             </div>
         </div>
-    </template>
+    </footer>
 
-    <script src="script.js"></script>
+    <footer class="mobile-footer">
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <ul class="footer_header">
+                        <li><a class="footer-header" href="store.html">FIND A STORE</a></li>
+                        <li><a class="footer-header" href="member.html">BECOME A MEMBER</a></li>
+                        <li><a class="footer-header" href="sign-up.html">SIGN UP FOR EMAIL</a></li>
+                        <li><a class="footer-header" href="student-discount.html">STUDENT DISCOUNT</a></li>
+                        <li><a class="footer-header" href="feedback.html">SEND US FEEBACK</a></li>
+                    </ul>
+                    <ul class="footer_header">
+                        <span class="footer-line"></span>
+                        <li><a class="footer-header" href="help.html">GET HELP</a></li>
+                        <li><a class="footer-desc" href="order-status.html">Order Status</a></li>
+                        <li><a class="footer-desc" href="delivery.html">Delivery</a></li>
+                        <li><a class="footer-desc" href="returns.html">Returns</a></li>
+                        <li><a class="footer-desc" href="payment-methods.html">Payment Methods</a></li>
+                        <li><a class="footer-desc" href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                    <ul class="footer_header">
+                        <span class="footer-line"></span>
+                        <li><a class="footer-header" href="about-us.html">ABOUT SECRET</a></li>
+                        <li><a class="footer-desc" href="news.html">News</a></li>
+                        <li><a class="footer-desc" href="careers.html">Careers</a></li>
+                        <li><a class="footer-desc" href="investor.html">Investors</a></li>
+                        <li><a class="footer-desc" href="sustainability.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="social_media">
+                    <a style="display: none;" href="https://www.tiktok.com/@secretmall"><i class="bx bx-tiktok"></i></a>
+                    <a href="https://facebook.com/secretofficial.id"><i class="bx bxl-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/secretmall.id/"><i class="bx bxl-instagram-alt"></i></a>
+                    <a href="https://twitter.com/secretmall_id"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://wa.me/+62895340347545"><i class="bx bxl-whatsapp"></i></a>
+                    <a href="https://www.youtube.com/@secretmall "><i class="bx bxl-youtube"></i></a>
+                </div>
+
+                <div class="footer_bottom">
+                    <div class="container" style="margin-left: 10px;">
+                        <a href="guides.html">Guides</a>
+                        <a href="terms-of-sale.html">Terms of Sale</a>
+                        <a href="terms-of-use.html">Terms of Use</a>
+                        <a href="privacy-policy.html">Secret Privacy Policy</a>
+                </div>
+                <div class="copy_right">
+                    <i class="bx bxs-map"></i>
+                    <span class="location"> Indonesia</span>
+                    <span class="secret-copyright">© 2022 Secret, Inc. All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- accordion -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- search -->
+    <script src="assets/js/homeSearch.js"></script>
+
 </body>
-</html> 
+</html>
