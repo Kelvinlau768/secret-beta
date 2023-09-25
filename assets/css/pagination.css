@@ -1,0 +1,28 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 30px;
+    max-width: 500px;
+}
+
+.pagination .previous {
+    width: 100px;
+}
+
+.pagination .pageNumber {
+    width: 100px;
+    text-align: center;
+}
+
+.pagination .next {
+    width: 100px;
+    text-align: right;
+}
+
+@media screen and (min-width: 1000px) {
+    .pagination {
+        padding-top: 30px;
+    }
+}
